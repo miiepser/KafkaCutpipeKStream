@@ -5,7 +5,7 @@ plugins {
     id 'com.google.cloud.tools.jib' version '0.9.11'
 }
 
-
+jib.to.image = 'bastianbaist/kafka-kstream'
 group 'de.sample.baist.kafka.KafkaCutpipeKStream'
 version '1.0-SNAPSHOT'
 
