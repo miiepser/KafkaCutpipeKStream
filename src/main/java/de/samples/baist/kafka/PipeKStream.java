@@ -1,5 +1,6 @@
 package de.samples.baist.kafka;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -16,12 +17,12 @@ import java.util.concurrent.CountDownLatch;
 
 public class PipeKStream implements CommandLineRunner {
 
-    public static final String FROM_TOPIC = "test-producer";
-    public static final String TO_TOPIC = "test-consumer";
+    public static String FROM_TOPIC = "test-producer";
+    public static String TO_TOPIC = "test-consumer";
 //    private final KafkaStreams streams;
 //    private final CountDownLatch latch;
 
-    Properties props = new Properties();
+    private static final Properties props = new Properties();
 
     {
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe-mod");
@@ -32,10 +33,29 @@ public class PipeKStream implements CommandLineRunner {
     }
 
 
+    private static void parseProperties(String[] optionalProps) {
+        for (int i = 0; i < CollectionUtils.size(optionalProps); ++i) {
+            final String currentArg = optionalProps[i];
+            switch (currentArg) {
+                case "bootstrap.servers":
+                    props.put(currentArg, optionalProps[++i]);
+                    break;
+                case "send.topic":
+                    TO_TOPIC = optionalProps[++i];
+                    break;
+                case "listen.topic":
+                    FROM_TOPIC = optionalProps[++i];
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
 
     @Override
     public void run(String... args) throws Exception {
+        parseProperties(args);
         final StreamsBuilder builder = new StreamsBuilder();
         KStream<String, String> b = builder.stream(FROM_TOPIC);
         //b.flatMapValues(s-> Arrays.asList(cutPrefix(s)));
