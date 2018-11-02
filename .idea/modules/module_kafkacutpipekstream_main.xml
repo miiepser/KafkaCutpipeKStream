@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_kafkacutpipekstream_main" default="compile.module.kafkacutpipekstream_main">
+  <dirname property="module.kafkacutpipekstream_main.basedir" file="${ant.file.module_kafkacutpipekstream_main}"/>
+  
+  <property name="module.jdk.home.kafkacutpipekstream_main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.kafkacutpipekstream_main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.kafkacutpipekstream_main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.kafkacutpipekstream_main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="kafkacutpipekstream_main.output.dir" value="${module.kafkacutpipekstream_main.basedir}/../../out/production/classes"/>
+  <property name="kafkacutpipekstream_main.testoutput.dir" value="${module.kafkacutpipekstream_main.basedir}/../../out/production/classes"/>
+  
+  <path id="kafkacutpipekstream_main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="kafkacutpipekstream_main.module.production.classpath">
+    <path refid="${module.jdk.classpath.kafkacutpipekstream_main}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-gradle-plugin:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-devtools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-streams:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-json:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-api:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-clients:2.0.0.classpath"/>
+    <path refid="library.gradle:_com.google.apis:google-api-services-cloudbuild:v1-rev20181017-1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-loader-tools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.spring.gradle:dependency-management-plugin:1.0.6.release.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.14.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.micrometer:micrometer-core:1.0.7.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.lz4:lz4-java:1.4.1.classpath"/>
+    <path refid="library.gradle:_org.xerial.snappy:snappy-java:1.1.7.1.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-to-slf4j:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.rocksdb:rocksdbjni:5.7.3.classpath"/>
+    <path refid="library.gradle:_com.google.api-client:google-api-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_javax.annotation:javax.annotation-api:1.3.2.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.7.classpath"/>
+    <path refid="library.gradle:_org.hdrhistogram:hdrhistogram:2.1.10.classpath"/>
+    <path refid="library.gradle:_org.latencyutils:latencyutils:2.0.3.classpath"/>
+    <path refid="library.gradle:_com.google.oauth-client:google-oauth-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client-jackson2:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:20.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-jcl:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.7.classpath"/>
+    <path refid="library.gradle:_javax.ws.rs:javax.ws.rs-api:2.1.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-api:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.10.classpath"/>
+  </path>
+  
+  <path id="kafkacutpipekstream_main.runtime.production.module.classpath">
+    <pathelement location="${kafkacutpipekstream_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-gradle-plugin:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-devtools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-streams:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-json:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-api:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-clients:2.0.0.classpath"/>
+    <path refid="library.gradle:_com.google.apis:google-api-services-cloudbuild:v1-rev20181017-1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-loader-tools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.spring.gradle:dependency-management-plugin:1.0.6.release.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.14.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.micrometer:micrometer-core:1.0.7.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.lz4:lz4-java:1.4.1.classpath"/>
+    <path refid="library.gradle:_org.xerial.snappy:snappy-java:1.1.7.1.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-to-slf4j:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.rocksdb:rocksdbjni:5.7.3.classpath"/>
+    <path refid="library.gradle:_com.google.api-client:google-api-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_javax.annotation:javax.annotation-api:1.3.2.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.7.classpath"/>
+    <path refid="library.gradle:_org.hdrhistogram:hdrhistogram:2.1.10.classpath"/>
+    <path refid="library.gradle:_org.latencyutils:latencyutils:2.0.3.classpath"/>
+    <path refid="library.gradle:_com.google.oauth-client:google-oauth-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client-jackson2:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:20.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-jcl:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.7.classpath"/>
+    <path refid="library.gradle:_javax.ws.rs:javax.ws.rs-api:2.1.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-api:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.10.classpath"/>
+  </path>
+  
+  <path id="kafkacutpipekstream_main.module.classpath">
+    <path refid="${module.jdk.classpath.kafkacutpipekstream_main}"/>
+    <pathelement location="${kafkacutpipekstream_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-gradle-plugin:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-devtools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-streams:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-json:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-api:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-clients:2.0.0.classpath"/>
+    <path refid="library.gradle:_com.google.apis:google-api-services-cloudbuild:v1-rev20181017-1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-loader-tools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.spring.gradle:dependency-management-plugin:1.0.6.release.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.14.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.micrometer:micrometer-core:1.0.7.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.lz4:lz4-java:1.4.1.classpath"/>
+    <path refid="library.gradle:_org.xerial.snappy:snappy-java:1.1.7.1.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-to-slf4j:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.rocksdb:rocksdbjni:5.7.3.classpath"/>
+    <path refid="library.gradle:_com.google.api-client:google-api-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_javax.annotation:javax.annotation-api:1.3.2.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.7.classpath"/>
+    <path refid="library.gradle:_org.hdrhistogram:hdrhistogram:2.1.10.classpath"/>
+    <path refid="library.gradle:_org.latencyutils:latencyutils:2.0.3.classpath"/>
+    <path refid="library.gradle:_com.google.oauth-client:google-oauth-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client-jackson2:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:20.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-jcl:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.7.classpath"/>
+    <path refid="library.gradle:_javax.ws.rs:javax.ws.rs-api:2.1.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-api:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.10.classpath"/>
+  </path>
+  
+  <path id="kafkacutpipekstream_main.runtime.module.classpath">
+    <pathelement location="${kafkacutpipekstream_main.output.dir}"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-gradle-plugin:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-devtools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-streams:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-json:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:connect-api:2.0.0.classpath"/>
+    <path refid="library.gradle:_org.apache.kafka:kafka-clients:2.0.0.classpath"/>
+    <path refid="library.gradle:_com.google.apis:google-api-services-cloudbuild:v1-rev20181017-1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-loader-tools:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.spring.gradle:dependency-management-plugin:1.0.6.release.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-compress:1.14.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_io.micrometer:micrometer-core:1.0.7.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-autoconfigure:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-actuator:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_org.lz4:lz4-java:1.4.1.classpath"/>
+    <path refid="library.gradle:_org.xerial.snappy:snappy-java:1.1.7.1.classpath"/>
+    <path refid="library.gradle:_org.springframework.boot:spring-boot-starter-logging:2.0.7.build-snapshot.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-to-slf4j:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:jul-to-slf4j:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.rocksdb:rocksdbjni:5.7.3.classpath"/>
+    <path refid="library.gradle:_com.google.api-client:google-api-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-context:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-aop:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-beans:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-expression:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-core:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_javax.annotation:javax.annotation-api:1.3.2.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.7.classpath"/>
+    <path refid="library.gradle:_org.hdrhistogram:hdrhistogram:2.1.10.classpath"/>
+    <path refid="library.gradle:_org.latencyutils:latencyutils:2.0.3.classpath"/>
+    <path refid="library.gradle:_com.google.oauth-client:google-oauth-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client-jackson2:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:20.0.classpath"/>
+    <path refid="library.gradle:_org.springframework:spring-jcl:5.0.10.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.7.classpath"/>
+    <path refid="library.gradle:_javax.ws.rs:javax.ws.rs-api:2.1.classpath"/>
+    <path refid="library.gradle:_com.google.http-client:google-http-client:1.26.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.apache.logging.log4j:log4j-api:2.10.0.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.10.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.kafkacutpipekstream_main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.kafkacutpipekstream_main">
+    <patternset refid="excluded.from.module.kafkacutpipekstream_main"/>
+  </patternset>
+  
+  <path id="kafkacutpipekstream_main.module.sourcepath">
+    <dirset dir="${module.kafkacutpipekstream_main.basedir}/../../src/main">
+      <include name="java"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.kafkacutpipekstream_main" depends="compile.module.kafkacutpipekstream_main.production,compile.module.kafkacutpipekstream_main.tests" description="Compile module KafkaCutpipeKStream_main"/>
+  
+  <target name="compile.module.kafkacutpipekstream_main.production" depends="register.custom.compilers" description="Compile module KafkaCutpipeKStream_main; production classes">
+    <mkdir dir="${kafkacutpipekstream_main.output.dir}"/>
+    <javac2 destdir="${kafkacutpipekstream_main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.kafkacutpipekstream_main}/javac">
+      <compilerarg line="${compiler.args.kafkacutpipekstream_main}"/>
+      <bootclasspath refid="kafkacutpipekstream_main.module.bootclasspath"/>
+      <classpath refid="kafkacutpipekstream_main.module.production.classpath"/>
+      <src refid="kafkacutpipekstream_main.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.kafkacutpipekstream_main"/>
+    </javac2>
+    
+    <copy todir="${kafkacutpipekstream_main.output.dir}">
+      <fileset dir="${module.kafkacutpipekstream_main.basedir}/../../src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.kafkacutpipekstream_main.basedir}/../../src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.kafkacutpipekstream_main.tests" depends="register.custom.compilers,compile.module.kafkacutpipekstream_main.production" description="compile module KafkaCutpipeKStream_main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.kafkacutpipekstream_main" description="cleanup module">
+    <delete dir="${kafkacutpipekstream_main.output.dir}"/>
+    <delete dir="${kafkacutpipekstream_main.testoutput.dir}"/>
+  </target>
+</project>
