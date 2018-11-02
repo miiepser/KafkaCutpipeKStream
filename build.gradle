@@ -11,16 +11,16 @@ jib{
         image = 'openjdk:8-jdk-alpine'
     }
     to {
-        image = 'bastianbaist/kafka-consumer'
+        image = 'bastianbaist/kafka-kstream'
         tags = ['configured.jib', 'latest']
     }
     container {
+        useCurrentTimestamp = true
 
     }
 }
 
 
-jib.to.image = 'bastianbaist/kafka-kstream'
 group 'de.sample.baist.kafka.KafkaCutpipeKStream'
 version '1.0-SNAPSHOT'
 

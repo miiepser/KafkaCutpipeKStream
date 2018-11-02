@@ -1,13 +1,17 @@
 package de.samples.baist.kafka;
 
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.kstream.KStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -15,7 +19,10 @@ import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
 
 
+@Component
 public class PipeKStream implements CommandLineRunner {
+
+    private static final Logger LOG = LoggerFactory.getLogger(PipeKStream.class);
 
     public static String FROM_TOPIC = "test-producer";
     public static String TO_TOPIC = "test-consumer";
@@ -50,25 +57,42 @@ public class PipeKStream implements CommandLineRunner {
                     break;
             }
         }
+        addPropertyIfSet("bootstrap.servers");
+        TO_TOPIC=  StringUtils.defaultIfEmpty(System.getenv("send.topic"), TO_TOPIC);
+        FROM_TOPIC = StringUtils.defaultIfEmpty(System.getenv("listen.topic"), FROM_TOPIC);
+
     }
 
 
+    private static void addPropertyIfSet(final String propertyName) {
+        final String propertyValue = System.getenv(propertyName);
+        if(null != propertyValue){
+            props.put(propertyName, propertyValue);
+        }
+    }
+
     @Override
     public void run(String... args) throws Exception {
+
+        LOG.info("Ready to start, parsing the given configuration...");
         parseProperties(args);
+        LOG.info("Listening to Topic {}, sending to Topic {} and received configured broker server {} ", FROM_TOPIC, TO_TOPIC, props.getProperty("bootstrap.servers"));
+
         final StreamsBuilder builder = new StreamsBuilder();
         KStream<String, String> b = builder.stream(FROM_TOPIC);
         //b.flatMapValues(s-> Arrays.asList(cutPrefix(s)));
         b.flatMapValues(PipeKStream::cutPrefix).to(TO_TOPIC);
 
         //b.to(TO_TOPIC);
-
+        LOG.info("Create topology");
         final Topology topology = builder.build();
+        LOG.info("Create topology");
 
         final KafkaStreams streams = new KafkaStreams(topology, props);
+        LOG.info("Create topology");
 
         final CountDownLatch latch = new CountDownLatch(1);
-
+        LOG.info("Create topology");
         // attach shutdown handler to catch control-c
         Runtime.getRuntime().addShutdownHook(new Thread("streams-shutdown-hook") {
             @Override
@@ -77,6 +101,8 @@ public class PipeKStream implements CommandLineRunner {
                 latch.countDown();
             }
         });
+        streams.start();
+
     }
 
     private static Collection<String> cutPrefix(String message) {
