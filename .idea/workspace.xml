@@ -2,25 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1ace098-9b4a-40c2-9edc-28375f178a69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/src/main/java/de/melsicon/jib/demonstration/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jib-Demonstration/src/main/java/de/melsicon/jib/demonstration/HelloWorld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/PipeKStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/PipeKStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampConsumer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampConsumer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampConsumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampConsumer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampConsumer/src/main/java/de/samples/baist/kafka/KafkaConsumerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampConsumer/src/main/java/de/samples/baist/kafka/KafkaConsumerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampProducer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampProducer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampProducer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampProducer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaTimestampProducer/src/main/java/de/samples/baist/kafka/KafkaProducerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaTimestampProducer/src/main/java/de/samples/baist/kafka/KafkaProducerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaConsumerClient/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/src/main/java/de/melsicon/jib/demonstration/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jib-Demonstration/src/main/java/de/melsicon/jib/demonstration/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/de/samples/baist/kafka/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/de/samples/baist/kafka/KafkaConsumerClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/de/samples/baist/kafka/KafkaProducerClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/de/samples/baist/kafka/PipeKStream.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -106,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/PipeKStream.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="477">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -637,16 +644,15 @@
       <workItem from="1540991702836" duration="21000" />
       <workItem from="1540991757130" duration="2189000" />
       <workItem from="1541140943907" duration="2388000" />
-      <workItem from="1541164875511" duration="910000" />
+      <workItem from="1541164875511" duration="1495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12829000" />
+    <option name="totallyTimeSpent" value="13414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -722,7 +728,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/samples/baist/kafka/PipeKStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
